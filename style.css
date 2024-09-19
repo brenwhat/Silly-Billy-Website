@@ -127,7 +127,7 @@ h3{
     font-weight: 800;
     font-size: 50px;
     color: white;
-    margin-left: 300px;
+    margin-left: 20%;
     margin-bottom: 10px;
 }
 .bgtext2{
@@ -141,7 +141,7 @@ hr.nom{
     margin-top: -5px;
 }
 button.support{
-    margin-left: 300px;
+    margin-left: 20%;
     margin-top: 10px;
     padding: 17px;
     border-width: 0px;
@@ -155,8 +155,10 @@ button.support a{
     font-weight: 700;
 }
 div.card {
-    height: 670px;
-    width: 18%;
+    aspect-ratio: 2/3;
+    height: fit-content;
+    width: fit-content;
+    max-width: 21%;
     background-color: hsl(214, 67%, 78%);
     box-shadow: 12px 12px 12px hsla(0, 0%, 17%, 0.274);
     margin-left: 20px;
@@ -209,5 +211,112 @@ div.cards{
     align-items: center;
     overflow: hidden;
     width: auto;
-    height: 770px;
+    height: 40em;
+}
+button.arrow {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-weight: 600;
+    font-size: larger;
+    background-color: hsla(212, 39%, 49%, 0.753);
+    color: hsla(0, 0%, 0%, 0.562);
+    scale: 2.5;
+    margin: 50px;
+}
+button.arrow:hover {
+    background-color: hsla(212, 39%, 49%, 0.945);
+}
+
+div.imgarrows {
+    margin-top: -6%;
+    display: flex;
+    width: 100%;
+}
+
+#arrowl {
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+#arrowr {
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+@media (max-width: 2030px) {
+    div.card {
+        aspect-ratio: 1/1.5;
+        max-width: 25%;
+        max-height: 700px;
+    }
+}
+@media (max-width: 1700px) {
+    div.card {
+        aspect-ratio: 1/2;
+        max-width: 31%;
+        max-height: 600px;
+    }
+}
+@media (max-width: 1000px) {
+    div.card {
+        aspect-ratio: 1/2.5;
+        max-width: 100%;
+        max-height: fit-content;
+    }
+}
+@media (max-width: 800px) {
+    div.card {
+        display: grid;
+        aspect-ratio: auto;
+        max-width: 100%;
+        max-height: 3000px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+    div.card img {
+        grid-column: 1;
+        grid-row: 2;
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+        margin-top: 0px;
+    }
+    div.card h1 {
+        float: left;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 20px;
+        margin-bottom: 0px;
+    }
+    div.card p {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 20px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    div.card button {
+        grid-column: 2;
+        grid-row: 2;
+        aspect-ratio: 6/1;
+        max-height: 30px;
+        margin-top: auto;
+        margin-left: 0px;
+    }
+    div.cards {
+        justify-content: start;
+        align-items: start;
+        display: block;
+        height: 1000px;
+    }
+}
+@media (max-width: 600px) {
+    div.cards {
+        height: 1300px;
+    }
+    div.card button {
+        grid-row: 3;
+    }
 }
