@@ -1,6 +1,6 @@
 * {
     font-family: Lexend, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 h1{
     margin-left: 10px;
@@ -53,9 +53,13 @@ footer{
     display: block;
     text-decoration: none;
     font-weight: bold;
+
+    transition: padding 0.1s ease-out;
 }
 .navbar a:hover{
-    background-color: hsl(212, 39%, 49%);
+    background-color: hsl(221, 69%, 59%);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .navbar li{
     float: left;
@@ -64,14 +68,24 @@ button{
     padding: 10px;
     font-size: 15px;
     border-radius: 8px;
-    background-color: rgb(79, 161, 255);
+    background-color: rgb(64, 163, 255);
     border-width: 0px;
     border-color: hsla(0, 0%, 0%, 0.432);
+    box-shadow: 0 7px 0 rgb(66, 147, 223);
+
+    transition: all 0.1s ease-out;
 }
 button a{
     font-weight: 600;
     text-decoration: none;
     color: rgba(36, 36, 36, 0.918);
+}
+button:hover {
+    background-color: rgb(61, 127, 224);
+}
+button:active {
+    transform: translateY(7px);
+    box-shadow: 0 0 0;
 }
 #imgl{
     float: left;
@@ -147,26 +161,23 @@ button.support{
     border-width: 0px;
     border-radius: 50px;
 }
-button.support:hover{
-    background-color: hsl(212, 39%, 49%);
-}
 button.support a{
     font-size: 30px;
     font-weight: 700;
 }
 div.card {
-    aspect-ratio: 2/3;
     height: fit-content;
     width: fit-content;
     max-width: 21%;
     background-color: hsl(214, 67%, 78%);
-    box-shadow: 12px 12px 12px hsla(0, 0%, 17%, 0.274);
+    box-shadow: 0 15px 0 hsla(204, 90%, 24%, 0.274);
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 20px;
+    border: 5px solid hsl(214, 67%, 78%);
     justify-content: center;
     overflow: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-out;
 }
 div.card img{
     width: 80%;
@@ -198,11 +209,9 @@ div.card button{
     margin-bottom: 7.5%;
     margin-left: 10%;
 }
-div.card button:hover{
-    background-color: hsl(214, 60%, 50%);
-}
 div.card:hover{
-    transform: scale(1.06);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 0 rgb(79, 120, 148);
     border: 5px solid rgb(79, 120, 148);
 }
 div.cards{
@@ -211,7 +220,8 @@ div.cards{
     align-items: center;
     overflow: hidden;
     width: auto;
-    height: 40em;
+    height: fit-content;
+    padding: 5%;
 }
 button.arrow {
     border-radius: 50%;
@@ -244,33 +254,34 @@ div.imgarrows {
     margin-left: auto;
 }
 
+div.sticky{
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+
 @media (max-width: 2030px) {
     div.card {
-        aspect-ratio: 1/1.5;
+        aspect-ratio: 1/2;
         max-width: 25%;
         max-height: 700px;
     }
 }
 @media (max-width: 1700px) {
     div.card {
-        aspect-ratio: 1/2;
-        max-width: 31%;
-        max-height: 600px;
+        aspect-ratio: auto;
+        max-width: 33%;
+        max-height: fit-content;
     }
 }
 @media (max-width: 1000px) {
     div.card {
-        aspect-ratio: 1/2.5;
-        max-width: 100%;
-        max-height: fit-content;
-    }
-}
-@media (max-width: 800px) {
-    div.card {
         display: grid;
         aspect-ratio: auto;
-        max-width: 100%;
-        max-height: 3000px;
+        max-width: 90%;
+        max-height: fit-content;
+        margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
         gap: 10px;
@@ -298,25 +309,17 @@ div.imgarrows {
         margin-left: 0px;
     }
     div.card button {
-        grid-column: 2;
-        grid-row: 2;
+        grid-column: 1;
+        grid-row: 3;
         aspect-ratio: 6/1;
         max-height: 30px;
-        margin-top: auto;
-        margin-left: 0px;
+        margin-top: 0px;
+        margin-left: 20px;
     }
     div.cards {
-        justify-content: start;
-        align-items: start;
+        justify-content: center;
+        align-items: center;
         display: block;
-        height: 1000px;
-    }
-}
-@media (max-width: 600px) {
-    div.cards {
-        height: 1300px;
-    }
-    div.card button {
-        grid-row: 3;
+        height: fit-content;
     }
 }
