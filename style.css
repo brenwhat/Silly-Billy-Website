@@ -206,6 +206,8 @@ div.card p{
 }
 div.card a{
     text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 div.card button{
     margin-top: 4%;
@@ -311,7 +313,7 @@ p.stats {
 
     div.statbox {
         display: grid;
-        grid-row: auto;
+        grid-row: aut;
     }
 }
 
@@ -359,7 +361,7 @@ p.stats {
         grid-column: 1;
         grid-row: 3;
         aspect-ratio: 6/1;
-        max-height: 30px;
+        max-height: 40px;
         margin-top: 0px;
         margin-left: 20px;
     }
