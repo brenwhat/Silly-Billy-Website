@@ -116,6 +116,9 @@ button:active {
     width: 300px;
     border-top: 3px solid rgb(56, 56, 56);
 }
+.title2{
+    width: 90%;
+}
 .soft{
     border: none;
     border-top: 3px solid rgba(79, 94, 133, 0.151);
@@ -260,6 +263,31 @@ div.sticky{
     z-index: 999;
 }
 
+div.stats {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 10%;
+}
+
+div.statbox {
+    display: grid;
+    grid-row: 1;
+}
+
+h1.stats {
+    font-size: 120px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+p.stats {
+    margin: auto;
+    margin-top: 0;
+    font-size: 50px;
+    grid-row: 2;
+    font-weight: 500;
+}
 
 @media (max-width: 2030px) {
     div.card {
@@ -275,15 +303,27 @@ div.sticky{
         max-height: fit-content;
     }
 }
+
+@media (max-width: 1400px) {
+    div.stats {
+        display: grid;
+    } 
+
+    div.statbox {
+        display: grid;
+        grid-row: auto;
+    }
+}
+
 @media (max-width: 1000px) {
     div.card {
         display: grid;
         aspect-ratio: auto;
         max-width: 90%;
-        max-height: fit-content;
+        max-height: 400px;
         margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         gap: 10px;
     }
     div.card img {
@@ -302,11 +342,18 @@ div.sticky{
         margin-bottom: 0px;
     }
     div.card p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        height: 190px;
         grid-column: 2;
         grid-row: 2;
         margin: 20px;
         margin-top: 0px;
         margin-left: 0px;
+        line-clamp: 6;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     div.card button {
         grid-column: 1;
